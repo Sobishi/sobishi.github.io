@@ -1372,3 +1372,170 @@ footer p {
     }
 
 }
+/* =========================================
+   INSIGHT ARTICLE
+   ========================================= */
+
+.article-content {
+    width: min(760px, calc(100% - 48px));
+
+    margin: 0 auto;
+
+    padding-bottom: 100px;
+}
+
+
+.article-content p {
+    margin-bottom: 24px;
+
+    color: #475467;
+
+    font-size: 17px;
+
+    line-height: 1.85;
+}
+
+
+.article-content h2 {
+    margin-top: 65px;
+
+    margin-bottom: 24px;
+
+    color: #17202a;
+
+    font-size: 34px;
+
+    letter-spacing: -1px;
+}
+
+
+.article-content blockquote {
+    margin: 35px 0;
+
+    padding: 24px 30px;
+
+    border-left: 3px solid #17202a;
+
+    background: #ffffff;
+
+    color: #17202a;
+
+    font-size: 20px;
+
+    font-weight: 600;
+}
+
+
+.article-diagram {
+    margin: 40px 0;
+
+    padding: 30px;
+
+    background: #ffffff;
+
+    border: 1px solid #e1e5ea;
+
+    border-radius: 8px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    text-align: center;
+}
+
+
+.article-diagram span {
+    color: #98a2b3;
+
+    font-size: 20px;
+}
+
+
+.article-highlight {
+    margin: 50px 0;
+
+    padding: 35px;
+
+    background: #17202a;
+
+    border-radius: 8px;
+
+    color: #ffffff;
+
+    text-align: center;
+}
+
+
+.article-highlight strong {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 42px;
+
+    letter-spacing: -2px;
+}
+
+
+.article-highlight span {
+    font-size: 13px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+
+.article-footer {
+    margin-top: 90px;
+
+    padding-top: 50px;
+
+    border-top: 1px solid #e1e5ea;
+}
+
+
+.article-footer h2 {
+    margin-top: 15px;
+}
+
+
+@media (max-width: 600px) {
+
+    .article-content {
+        width: calc(100% - 32px);
+    }
+
+
+    .article-content p {
+        font-size: 16px;
+    }
+
+
+    .article-content h2 {
+        font-size: 30px;
+    }
+
+
+    .article-diagram {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .article-diagram span {
+        transform: rotate(90deg);
+    }
+
+
+    .article-highlight strong {
+        font-size: 36px;
+    }
+
+}

@@ -1539,3 +1539,87 @@ footer p {
     }
 
 }
+/* =========================================
+   INSIGHTS PAGE FIX
+   ========================================= */
+
+.content-section {
+    width: min(1100px, calc(100% - 48px));
+    margin-left: auto;
+    margin-right: auto;
+
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+
+.content-section > p:not(.section-label),
+.content-section > h2 {
+    max-width: 760px;
+}
+
+.content-section > p:not(.section-label) {
+    line-height: 1.8;
+    color: #667085;
+    font-size: 17px;
+}
+
+
+/* Insight cards */
+
+.content-section .project-grid {
+    width: 100%;
+    margin-top: 42px;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+
+.content-section .project-card {
+    min-width: 0;
+}
+
+
+/* =========================================
+   INSIGHTS — MOBILE
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    .content-section {
+        width: calc(100% - 48px);
+    }
+
+    .content-section .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .content-section {
+        width: calc(100% - 32px);
+
+        padding-top: 65px;
+        padding-bottom: 65px;
+    }
+
+    .content-section > p:not(.section-label) {
+        max-width: 100%;
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .content-section .project-grid {
+        width: 100%;
+        margin-top: 30px;
+
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+}

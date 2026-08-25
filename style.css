@@ -906,3 +906,367 @@ body {
     }
 
 }
+/* =========================================
+   FINAL CONTENT WIDTH SYSTEM
+   STEP 8C
+   ========================================= */
+
+/*
+   The site uses a deliberately narrower reading column
+   for professional written content.
+
+   This prevents paragraphs from stretching across
+   the entire screen and improves desktop readability.
+*/
+
+
+/* ---------- UNIVERSAL PAGE CONTAINER ---------- */
+
+.page-hero,
+.content-section,
+.about-layout,
+.about-main,
+.about-section {
+    width: min(100% - 56px, 1080px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* ---------- PAGE INTRO ---------- */
+
+.page-hero {
+    padding-top: 110px;
+    padding-bottom: 80px;
+}
+
+
+.page-hero h1 {
+    max-width: 850px;
+    margin-bottom: 28px;
+}
+
+
+.page-hero p:not(.section-label) {
+    max-width: 720px;
+    color: #667085;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+
+/* ---------- MAIN CONTENT ---------- */
+
+.content-section {
+    padding-top: 40px;
+    padding-bottom: 90px;
+}
+
+
+/*
+   Headings remain reasonably wide,
+   while body copy stays deliberately narrow.
+*/
+
+.content-section h2 {
+    max-width: 850px;
+    margin-bottom: 26px;
+}
+
+
+.content-section > p:not(.section-label) {
+    max-width: 760px;
+    color: #667085;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+
+/* ---------- EXPERIENCE ---------- */
+
+.experience-entry {
+    padding-top: 70px;
+}
+
+
+.experience-entry > h3 {
+    margin-bottom: 28px;
+    color: #667085;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+
+.experience-block {
+    max-width: 900px;
+    margin-top: 55px;
+}
+
+
+.experience-block > h3 {
+    margin-bottom: 20px;
+    font-size: 21px;
+}
+
+
+/* ---------- EXPERIENCE LISTS ---------- */
+
+.experience-block ul {
+    max-width: 760px;
+
+    margin: 0;
+    padding-left: 22px;
+
+    color: #667085;
+
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+.experience-block li {
+    margin-bottom: 12px;
+}
+
+
+/* ---------- EXPERIENCE CASE STUDIES ---------- */
+
+.case-grid {
+    max-width: 100%;
+
+    margin-top: 28px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+
+.case-card {
+    min-width: 0;
+
+    padding: 30px;
+
+    background: #ffffff;
+
+    border: 1px solid #e1e5ea;
+
+    border-radius: 8px;
+}
+
+
+.case-number {
+    display: block;
+
+    margin-bottom: 18px;
+
+    color: #667085;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+
+.case-card h3 {
+    margin-bottom: 14px;
+
+    font-size: 21px;
+}
+
+
+.case-card p {
+    margin-bottom: 22px;
+
+    color: #667085;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+.case-card strong {
+    display: block;
+
+    font-size: 15px;
+}
+
+
+/* ---------- ABOUT PAGE ---------- */
+
+.about-layout {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 720px)
+        minmax(220px, 280px);
+
+    gap: 70px;
+
+    align-items: start;
+}
+
+
+.about-main {
+    width: 100%;
+    max-width: 720px;
+    margin: 0;
+}
+
+
+.about-main p,
+.about-section p {
+    max-width: 720px;
+
+    color: #667085;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+
+/* ---------- ABOUT SIDEBAR ---------- */
+
+.about-sidebar {
+    width: 100%;
+}
+
+
+.about-card {
+    margin-bottom: 28px;
+}
+
+
+/* ---------- DESKTOP SPACING ---------- */
+
+@media (min-width: 901px) {
+
+    .content-section {
+        padding-top: 55px;
+        padding-bottom: 100px;
+    }
+
+    .experience-entry {
+        padding-top: 80px;
+    }
+
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    .page-hero,
+    .content-section,
+    .about-layout,
+    .about-main,
+    .about-section {
+        width: calc(100% - 48px);
+    }
+
+
+    .about-layout {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+
+    .about-main {
+        max-width: 760px;
+    }
+
+
+    .case-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    .page-hero,
+    .content-section,
+    .about-layout,
+    .about-main,
+    .about-section {
+        width: calc(100% - 32px);
+    }
+
+
+    .page-hero {
+        padding-top: 75px;
+        padding-bottom: 55px;
+    }
+
+
+    .page-hero h1 {
+        font-size: 42px;
+
+        letter-spacing: -1.8px;
+    }
+
+
+    .page-hero p:not(.section-label) {
+        font-size: 16px;
+    }
+
+
+    .content-section {
+        padding-top: 35px;
+        padding-bottom: 65px;
+    }
+
+
+    .content-section > p:not(.section-label),
+    .about-main p,
+    .about-section p {
+        max-width: 100%;
+
+        font-size: 16px;
+
+        line-height: 1.75;
+    }
+
+
+    .experience-entry {
+        padding-top: 55px;
+    }
+
+
+    .experience-block {
+        margin-top: 40px;
+    }
+
+
+    .experience-block ul {
+        font-size: 15px;
+    }
+
+
+    .case-grid {
+        grid-template-columns: 1fr;
+
+        gap: 16px;
+    }
+
+
+    .case-card {
+        padding: 25px;
+    }
+
+}

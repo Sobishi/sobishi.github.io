@@ -365,3 +365,132 @@ footer {
     }
 
 }
+.project-section {
+    max-width: 1100px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-top: 35px;
+}
+
+.project-card {
+    border: 1px solid #e5e7eb;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 250px;
+}
+
+.project-card h3 {
+    font-size: 24px;
+    margin: 15px 0;
+}
+
+.project-card p {
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.project-card a {
+    display: inline-block;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.project-status {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.tags span {
+    border: 1px solid #d1d5db;
+    padding: 6px 10px;
+    font-size: 12px;
+}
+
+.featured-project {
+    margin-top: 35px;
+    min-height: 280px;
+}
+
+.future-project {
+    margin-top: 35px;
+    border-style: dashed;
+}
+
+.flagship-section {
+    padding-bottom: 80px;
+}
+
+.flagship-project {
+    margin-top: 35px;
+    border-width: 2px;
+    min-height: 400px;
+}
+
+.architecture-preview {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.architecture-preview div {
+    border: 1px solid #e5e7eb;
+    padding: 20px;
+}
+
+.architecture-preview strong {
+    display: block;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.architecture-preview span {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.project-note {
+    margin-top: 25px;
+    font-size: 14px !important;
+    font-style: italic;
+}
+
+.final-cta {
+    text-align: center;
+}
+
+.button {
+    display: inline-block;
+    padding: 13px 22px;
+    border: 1px solid #111827;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+@media (max-width: 800px) {
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .architecture-preview {
+        grid-template-columns: 1fr;
+    }
+
+}

@@ -229,3 +229,60 @@ footer {
         font-size: 52px;
     }
 }
+.page-hero {
+    padding: 100px 6% 70px;
+    max-width: 900px;
+}
+
+.page-hero h1 {
+    font-size: clamp(42px, 7vw, 72px);
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.page-hero p:not(.section-label) {
+    font-size: 22px;
+    max-width: 750px;
+}
+
+.content-section {
+    padding: 70px 6%;
+    max-width: 950px;
+    border-top: 1px solid #e5e7eb;
+}
+
+.content-section h2 {
+    font-size: 36px;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.content-section > p {
+    font-size: 18px;
+    max-width: 850px;
+    margin-bottom: 20px;
+}
+
+.content-section .focus {
+    padding: 20px 0 0;
+}
+
+.content-section .metrics {
+    margin-top: 35px;
+}
+
+@media (max-width: 800px) {
+
+    .page-hero {
+        padding-top: 70px;
+    }
+
+    .page-hero h1 {
+        font-size: 48px;
+    }
+
+    .content-section h2 {
+        font-size: 32px;
+    }
+
+}

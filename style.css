@@ -1623,3 +1623,224 @@ footer p {
     }
 
 }
+/* =========================================
+   ARTICLE PAGE — READING LAYOUT
+   ========================================= */
+
+.article-content {
+    width: min(760px, calc(100% - 48px));
+    margin-left: auto;
+    margin-right: auto;
+
+    padding-top: 20px;
+    padding-bottom: 100px;
+}
+
+
+/* Article paragraphs */
+
+.article-content > p {
+    max-width: 760px;
+
+    margin-bottom: 24px;
+
+    color: #667085;
+
+    font-size: 17px;
+    line-height: 1.85;
+}
+
+
+/* Article headings */
+
+.article-content h2 {
+    max-width: 760px;
+
+    margin-top: 64px;
+    margin-bottom: 24px;
+
+    font-size: 32px;
+    line-height: 1.25;
+
+    letter-spacing: -1px;
+}
+
+
+/* Quotes */
+
+.article-content blockquote {
+    max-width: 700px;
+
+    margin: 35px 0;
+
+    padding: 20px 24px;
+
+    border-left: 3px solid #17202a;
+
+    color: #344054;
+
+    font-size: 19px;
+    font-style: italic;
+    line-height: 1.7;
+}
+
+
+/* Article diagram */
+
+.article-diagram {
+    width: 100%;
+    max-width: 600px;
+
+    margin: 40px auto;
+
+    padding: 30px;
+
+    background: #ffffff;
+
+    border: 1px solid #e1e5ea;
+    border-radius: 8px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+
+    text-align: center;
+}
+
+
+.article-diagram strong {
+    font-size: 16px;
+}
+
+
+.article-diagram span {
+    color: #667085;
+    font-size: 20px;
+}
+
+
+/* Key result */
+
+.article-highlight {
+    max-width: 600px;
+
+    margin: 45px auto;
+
+    padding: 35px;
+
+    background: #ffffff;
+
+    border: 1px solid #e1e5ea;
+    border-radius: 8px;
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+
+.article-highlight strong {
+    font-size: 42px;
+    letter-spacing: -1.5px;
+}
+
+
+.article-highlight span {
+    color: #667085;
+
+    font-size: 13px;
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+/* Article ending */
+
+.article-footer {
+    margin-top: 90px;
+    padding-top: 60px;
+
+    border-top: 1px solid #e1e5ea;
+}
+
+
+.article-footer p:not(.section-label) {
+    max-width: 700px;
+}
+
+
+/* =========================================
+   ARTICLE — MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    .article-content {
+        width: calc(100% - 32px);
+
+        padding-top: 10px;
+        padding-bottom: 70px;
+    }
+
+
+    .article-content > p {
+        max-width: 100%;
+
+        font-size: 16px;
+        line-height: 1.75;
+    }
+
+
+    .article-content h2 {
+        max-width: 100%;
+
+        margin-top: 48px;
+
+        font-size: 28px;
+    }
+
+
+    .article-content blockquote {
+        width: 100%;
+
+        margin: 30px 0;
+
+        padding: 16px 20px;
+
+        font-size: 17px;
+    }
+
+
+    .article-diagram {
+        width: 100%;
+
+        padding: 24px 18px;
+
+        margin: 32px 0;
+    }
+
+
+    .article-highlight {
+        width: 100%;
+
+        margin: 35px 0;
+
+        padding: 28px 20px;
+    }
+
+
+    .article-highlight strong {
+        font-size: 36px;
+    }
+
+
+    .article-footer {
+        margin-top: 60px;
+        padding-top: 40px;
+    }
+
+}

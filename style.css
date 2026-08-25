@@ -750,3 +750,159 @@ footer p {
     }
 
 }
+/* =========================================
+   GLOBAL CONTENT WIDTH & READING LAYOUT
+   ========================================= */
+
+main {
+    width: 100%;
+}
+
+.page-hero,
+.about-layout,
+.about-section,
+.featured,
+.project-section,
+.featured-project,
+.metrics,
+.intro,
+.focus {
+    width: min(1100px, calc(100% - 48px));
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Comfortable reading width */
+
+.about-main,
+.about-section {
+    max-width: 760px;
+}
+
+
+/* Page introduction */
+
+.page-hero {
+    max-width: 900px;
+}
+
+
+/* Standard paragraph readability */
+
+.about-main p,
+.about-section p,
+.page-hero p,
+.intro p,
+.featured p {
+    max-width: 760px;
+    line-height: 1.8;
+}
+
+
+/* About two-column layout */
+
+.about-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 760px) minmax(260px, 320px);
+    gap: 70px;
+    align-items: start;
+}
+
+
+/* Sidebar */
+
+.about-sidebar {
+    width: 100%;
+}
+
+
+/* Sidebar cards */
+
+.about-card {
+    margin-bottom: 28px;
+}
+
+
+/* Metrics */
+
+.metrics {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+
+/* Prevent text from becoming excessively wide */
+
+body {
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    .about-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .about-main,
+    .about-section {
+        max-width: 760px;
+    }
+
+    .metrics {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    .page-hero,
+    .about-layout,
+    .about-section,
+    .featured,
+    .project-section,
+    .featured-project,
+    .metrics,
+    .intro,
+    .focus {
+        width: calc(100% - 32px);
+    }
+
+    .about-layout {
+        display: block;
+    }
+
+    .about-main,
+    .about-section,
+    .page-hero {
+        max-width: 100%;
+    }
+
+    .about-main p,
+    .about-section p,
+    .page-hero p,
+    .intro p,
+    .featured p {
+        max-width: 100%;
+        line-height: 1.7;
+    }
+
+    .metrics {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+}

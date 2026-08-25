@@ -1167,3 +1167,208 @@ footer p {
         padding-right: 16px;
     }
 }
+/* =========================================
+   CONTACT PAGE
+   ========================================= */
+
+.contact-section {
+    width: min(1100px, calc(100% - 48px));
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 90px;
+}
+
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 320px;
+    gap: 70px;
+    align-items: start;
+}
+
+
+.contact-card {
+    max-width: 760px;
+}
+
+
+.contact-card h2 {
+    max-width: 700px;
+    margin-bottom: 26px;
+    font-size: clamp(34px, 5vw, 52px);
+    letter-spacing: -2px;
+}
+
+
+.contact-card > p:not(.section-label) {
+    max-width: 680px;
+    color: #667085;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+
+.contact-links {
+    margin-top: 42px;
+
+    display: flex;
+    flex-direction: column;
+
+    border-top: 1px solid #e1e5ea;
+}
+
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    padding: 22px 0;
+
+    border-bottom: 1px solid #e1e5ea;
+
+    color: #17202a;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    transition:
+        color 0.2s ease,
+        padding-left 0.2s ease;
+}
+
+
+.contact-link:hover {
+    color: #667085;
+    padding-left: 5px;
+}
+
+
+.contact-label {
+    flex-shrink: 0;
+
+    color: #667085;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+}
+
+
+.contact-sidebar {
+    padding: 30px;
+
+    background: #ffffff;
+
+    border: 1px solid #e1e5ea;
+    border-radius: 8px;
+}
+
+
+.contact-sidebar h3 {
+    margin-bottom: 22px;
+
+    font-size: 22px;
+
+    letter-spacing: -0.5px;
+}
+
+
+.contact-sidebar ul {
+    margin: 0;
+    padding-left: 20px;
+
+    color: #667085;
+
+    font-size: 15px;
+
+    line-height: 1.9;
+}
+
+
+.contact-sidebar li {
+    margin-bottom: 5px;
+}
+
+
+/* ---------- CONTACT TABLET ---------- */
+
+@media (max-width: 900px) {
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .contact-card {
+        max-width: 760px;
+    }
+
+    .contact-sidebar {
+        max-width: 600px;
+    }
+
+}
+
+
+/* ---------- CONTACT MOBILE ---------- */
+
+@media (max-width: 600px) {
+
+    .contact-section {
+        width: calc(100% - 32px);
+
+        padding-bottom: 60px;
+    }
+
+
+    .contact-grid {
+        display: block;
+    }
+
+
+    .contact-card {
+        max-width: 100%;
+    }
+
+
+    .contact-card h2 {
+        font-size: 36px;
+    }
+
+
+    .contact-card > p:not(.section-label) {
+        max-width: 100%;
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+
+    .contact-links {
+        margin-top: 32px;
+    }
+
+
+    .contact-link {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 7px;
+
+        padding: 18px 0;
+
+        overflow-wrap: anywhere;
+    }
+
+
+    .contact-sidebar {
+        margin-top: 45px;
+
+        padding: 24px;
+    }
+
+}

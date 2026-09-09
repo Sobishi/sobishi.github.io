@@ -766,7 +766,33 @@ header {
     line-height: 1.8;
 }
 
+/* =========================================
+   PROJECT SECTION
+   ========================================= */
 
+.project-section {
+    width: min(100% - 56px, 1180px);
+
+    margin: 0 auto;
+
+    padding-bottom: 80px;
+}
+
+.project-section h2 {
+    max-width: 850px;
+
+    margin-bottom: 20px;
+}
+
+.project-section > p:not(.section-label) {
+    max-width: 760px;
+
+    color: #667085;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
 /* =========================================
    19. PROJECT GRID
    ========================================= */

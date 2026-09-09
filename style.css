@@ -1844,3 +1844,23 @@ footer p {
     }
 
 }
+/* =========================
+   CASE STUDY IMAGES
+========================= */
+
+.process-image {
+    display: block;
+    width: 70%;
+    max-width: 800px;
+    margin: 3rem auto;
+    border-radius: 10px;
+}
+
+.dashboard-image {
+    display: block;
+    width: 90%;
+    max-width: 1200px;
+    margin: 3rem auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}

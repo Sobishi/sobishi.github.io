@@ -1898,49 +1898,15 @@ footer p {
 }
 /* =========================================================
    SUPPLY CHAIN LOGISTICS CASE STUDY
-   Page-specific styling
    ========================================================= */
 
 
 /* =========================================
-   1. CASE STUDY PAGE WIDTH
-   ========================================= */
-
-.case-section {
-    width: min(100% - 56px, 1080px);
-    margin: 0 auto;
-
-    padding-top: 70px;
-    padding-bottom: 80px;
-}
-
-.case-section > h2 {
-    max-width: 850px;
-
-    margin-bottom: 28px;
-
-    font-size: clamp(32px, 5vw, 48px);
-
-    letter-spacing: -1.8px;
-}
-
-.case-section > p:not(.section-label) {
-    max-width: 760px;
-
-    color: #667085;
-
-    font-size: 17px;
-
-    line-height: 1.8;
-}
-
-
-/* =========================================
-   2. CASE STUDY HERO
+   CASE STUDY HERO
    ========================================= */
 
 .page-hero {
-    width: min(100% - 56px, 1080px);
+    width: min(1080px, calc(100% - 56px));
 
     margin: 0 auto;
 
@@ -1972,22 +1938,58 @@ footer p {
 
 
 /* =========================================
-   3. EXECUTIVE METRICS
+   CASE STUDY SECTIONS
    ========================================= */
 
-.case-section .metrics-grid {
+.case-section {
+    width: min(1080px, calc(100% - 56px));
+
+    margin: 0 auto;
+
+    padding-top: 70px;
+    padding-bottom: 80px;
+}
+
+.case-section > h2 {
+    max-width: 850px;
+
+    margin-bottom: 28px;
+
+    font-size: clamp(32px, 5vw, 48px);
+
+    line-height: 1.2;
+
+    letter-spacing: -1.8px;
+}
+
+.case-section > p:not(.section-label) {
+    max-width: 760px;
+
+    color: #667085;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   EXECUTIVE METRICS
+   ========================================= */
+
+.metrics-grid {
     width: 100%;
 
     margin: 40px 0 42px;
 
     display: grid;
 
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
 
     gap: 14px;
 }
 
-.case-section .metric-card {
+.metric-card {
     min-width: 0;
 
     padding: 28px 24px;
@@ -2004,7 +2006,7 @@ footer p {
         box-shadow 0.2s ease;
 }
 
-.case-section .metric-card:hover {
+.metric-card:hover {
     transform: translateY(-3px);
 
     border-color: #c5cbd3;
@@ -2013,7 +2015,7 @@ footer p {
         0 10px 24px rgba(16, 24, 40, 0.06);
 }
 
-.case-section .metric-card h3 {
+.metric-card h3 {
     margin-bottom: 8px;
 
     font-size: 32px;
@@ -2021,7 +2023,7 @@ footer p {
     letter-spacing: -1.2px;
 }
 
-.case-section .metric-card p {
+.metric-card p {
     margin: 0;
 
     color: #667085;
@@ -2039,7 +2041,7 @@ footer p {
 
 
 /* =========================================
-   4. PROJECT FILES
+   PROJECT FILES
    ========================================= */
 
 .case-download {
@@ -2076,13 +2078,17 @@ footer p {
     line-height: 1.75;
 }
 
-.case-download .text-link {
-    margin-right: 20px;
+.project-file-links {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 24px;
 }
 
 
 /* =========================================
-   5. LISTS
+   CASE STUDY LISTS
    ========================================= */
 
 .case-section ul,
@@ -2108,22 +2114,22 @@ footer p {
 
 
 /* =========================================
-   6. FINDINGS GRID
+   FINDINGS
    ========================================= */
 
-.case-section .findings-grid {
+.findings-grid {
     width: 100%;
 
     margin-top: 40px;
 
     display: grid;
 
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
 
     gap: 16px;
 }
 
-.case-section .finding-card {
+.finding-card {
     min-width: 0;
 
     padding: 28px;
@@ -2135,7 +2141,7 @@ footer p {
     border-radius: 8px;
 }
 
-.case-section .finding-card h3 {
+.finding-card h3 {
     margin-bottom: 12px;
 
     font-size: 32px;
@@ -2143,7 +2149,7 @@ footer p {
     letter-spacing: -1px;
 }
 
-.case-section .finding-card p {
+.finding-card p {
     margin: 0;
 
     color: #667085;
@@ -2154,26 +2160,19 @@ footer p {
 }
 
 
-/* =========================================================
-   7. CASE STUDY IMAGES
-   ========================================================= */
-
-/*
-   This is the important section.
-
-   The old images were effectively being rendered directly
-   against the page. These rules create a controlled,
-   centred presentation area.
-*/
+/* =========================================
+   CASE STUDY IMAGES
+   ========================================= */
 
 .case-image {
     display: block;
 
-    width: min(100% - 96px, 1120px);
+    width: 100%;
+    max-width: 980px;
 
     height: auto;
 
-    margin: 45px auto 75px;
+    margin: 45px auto 55px;
 
     padding: 14px;
 
@@ -2185,146 +2184,132 @@ footer p {
 
     box-shadow:
         0 8px 28px rgba(16, 24, 40, 0.06);
-
-    object-fit: contain;
-}
-
-
-/* Solution architecture is usually better slightly narrower */
-
-.case-section .case-image {
-    width: min(100% - 96px, 980px);
-}
-
-
-/* Dashboard screenshots get a little more room */
-
-.case-section + .case-image {
-    width: min(100% - 96px, 1120px);
 }
 
 
 /* =========================================
-   8. DASHBOARD SCREENSHOT PRESENTATION
+   DASHBOARD INTRODUCTION
    ========================================= */
 
-/*
-   Give dashboards a soft neutral canvas so that the
-   screenshot itself doesn't visually collide with the page.
-*/
+.dashboard-section {
+    padding-bottom: 35px;
+}
 
-img[alt="Executive Dashboard"],
-img[alt="Provider Scorecard"],
-img[alt="Exception Analysis Dashboard"],
-img[alt="Site Performance Dashboard"] {
+
+/* =========================================
+   DASHBOARD GALLERY
+   ========================================= */
+
+.dashboard-gallery {
+    width: min(1180px, calc(100% - 56px));
+
+    margin: 0 auto 60px;
+}
+
+.dashboard-card {
+    margin: 0 0 70px;
+}
+
+.dashboard-card .case-image {
+    width: 100%;
+    max-width: 1180px;
+
+    margin: 0 auto;
+
+    padding: 16px;
+
     background: #f4f6f8;
-}
 
+    border: 1px solid #dfe3e8;
 
-/*
-   Dashboard screenshots should not become excessively tall.
-   The browser preserves the original aspect ratio.
-*/
+    border-radius: 12px;
 
-img[alt="Executive Dashboard"],
-img[alt="Provider Scorecard"],
-img[alt="Exception Analysis Dashboard"],
-img[alt="Site Performance Dashboard"] {
-    max-height: 720px;
+    box-shadow:
+        0 10px 30px rgba(16, 24, 40, 0.07);
 
     object-fit: contain;
 }
 
+.dashboard-card figcaption {
+    width: 100%;
 
-/* =========================================
-   9. DASHBOARD SEPARATION
-   ========================================= */
+    margin-top: 14px;
 
-/*
-   Add more breathing room between consecutive dashboard
-   screenshots.
-*/
+    color: #667085;
 
-.case-image + .case-image {
-    margin-top: 85px;
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
 }
 
 
 /* =========================================
-   10. FINAL FEATURED SECTION
+   FINAL FEATURED SECTION
    ========================================= */
 
-.case-section + .featured {
-    width: min(100% - 56px, 1080px);
-
-    margin-left: auto;
-    margin-right: auto;
-
+.case-next-step {
     padding-top: 85px;
     padding-bottom: 95px;
+
+    border-top: 1px solid #e1e5ea;
 }
 
-.case-section + .featured h2 {
+.case-next-step h2 {
     max-width: 850px;
 }
 
-.case-section + .featured > p:not(.section-label) {
+.case-next-step > p:not(.section-label) {
     max-width: 720px;
 }
 
 
 /* =========================================
-   11. TABLET
+   TABLET
    ========================================= */
 
 @media (max-width: 900px) {
 
+    .page-hero,
     .case-section {
         width: calc(100% - 48px);
     }
 
-    .page-hero {
+    .metrics-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .findings-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .dashboard-gallery {
         width: calc(100% - 48px);
-    }
-
-    .case-section .metrics-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .case-section .findings-grid {
-        grid-template-columns: repeat(2, 1fr);
     }
 
     .case-image,
-    .case-section .case-image,
-    .case-section + .case-image {
-        width: calc(100% - 48px);
-
-        padding: 10px;
-
-        margin-top: 38px;
-        margin-bottom: 60px;
+    .dashboard-card .case-image {
+        max-width: 100%;
     }
 
 }
 
 
 /* =========================================
-   12. MOBILE
+   MOBILE
    ========================================= */
 
 @media (max-width: 600px) {
 
+    .page-hero,
     .case-section {
         width: calc(100% - 32px);
-
-        padding-top: 55px;
-        padding-bottom: 60px;
     }
 
     .page-hero {
-        width: calc(100% - 32px);
-
         padding-top: 75px;
         padding-bottom: 55px;
     }
@@ -2342,28 +2327,28 @@ img[alt="Site Performance Dashboard"] {
 
     /* Metrics */
 
-    .case-section .metrics-grid {
-        grid-template-columns: 1fr 1fr;
+    .metrics-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
 
         gap: 10px;
 
         margin-top: 30px;
     }
 
-    .case-section .metric-card {
+    .metric-card {
         padding: 22px 18px;
     }
 
-    .case-section .metric-card h3 {
+    .metric-card h3 {
         font-size: 28px;
     }
 
-    .case-section .metric-card p {
+    .metric-card p {
         font-size: 10px;
     }
 
 
-    /* Download card */
+    /* Project files */
 
     .case-download {
         padding: 25px 22px;
@@ -2371,20 +2356,24 @@ img[alt="Site Performance Dashboard"] {
         margin-bottom: 45px;
     }
 
-    .case-download .text-link {
-        margin-bottom: 10px;
+    .project-file-links {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 14px;
     }
 
 
     /* Findings */
 
-    .case-section .findings-grid {
+    .findings-grid {
         grid-template-columns: 1fr;
 
         gap: 12px;
     }
 
-    .case-section .finding-card {
+    .finding-card {
         padding: 24px;
     }
 
@@ -2392,28 +2381,38 @@ img[alt="Site Performance Dashboard"] {
     /* Images */
 
     .case-image,
-    .case-section .case-image,
-    .case-section + .case-image {
-        width: calc(100% - 16px);
-
-        margin-top: 32px;
-        margin-bottom: 50px;
+    .dashboard-card .case-image {
+        width: 100%;
 
         padding: 7px;
+
+        margin-top: 30px;
+        margin-bottom: 40px;
 
         border-radius: 9px;
     }
 
-    .case-image + .case-image {
-        margin-top: 60px;
+
+    /* Dashboard gallery */
+
+    .dashboard-gallery {
+        width: calc(100% - 32px);
+
+        margin-bottom: 30px;
+    }
+
+    .dashboard-card {
+        margin-bottom: 50px;
+    }
+
+    .dashboard-card .case-image {
+        margin: 0;
     }
 
 
     /* Final section */
 
-    .case-section + .featured {
-        width: calc(100% - 32px);
-
+    .case-next-step {
         padding-top: 65px;
         padding-bottom: 70px;
     }

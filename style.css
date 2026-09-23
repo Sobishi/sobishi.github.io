@@ -25,10 +25,7 @@ body {
     line-height: 1.7;
     overflow-x: hidden;
 }
-.article-content {
-    width: min(100% - 56px, 900px);
-    margin: 0 auto;
-}
+
 a {
     color: inherit;
     text-decoration: none;
@@ -51,13 +48,12 @@ main {
 
 
 /* =========================================
-   2. SITE CONTAINER
+   2. SHARED CONTAINERS
    ========================================= */
 
 nav {
     width: min(100% - 56px, 1180px);
     min-height: 76px;
-
     margin: 0 auto;
 
     display: flex;
@@ -67,9 +63,14 @@ nav {
     gap: 30px;
 }
 
+.article-content {
+    width: min(760px, calc(100% - 48px));
+    margin: 0 auto;
+}
+
 
 /* =========================================
-   3. NAVIGATION
+   3. HEADER / NAVIGATION
    ========================================= */
 
 header {
@@ -119,16 +120,8 @@ header {
 
 
 /* =========================================
-   4. HOMEPAGE HERO
+   4. GLOBAL LABELS
    ========================================= */
-
-.hero {
-    width: min(100% - 56px, 1180px);
-
-    margin: 0 auto;
-
-    padding: 125px 0 100px;
-}
 
 .eyebrow,
 .section-label {
@@ -140,6 +133,23 @@ header {
     letter-spacing: 1.8px;
 
     text-transform: uppercase;
+}
+
+.section-label {
+    margin-bottom: 18px;
+}
+
+
+/* =========================================
+   5. HOMEPAGE HERO
+   ========================================= */
+
+.hero {
+    width: min(100% - 56px, 1180px);
+
+    margin: 0 auto;
+
+    padding: 125px 0 100px;
 }
 
 .eyebrow {
@@ -182,7 +192,7 @@ header {
 
 
 /* =========================================
-   5. BUTTONS
+   6. BUTTONS
    ========================================= */
 
 .hero-buttons {
@@ -243,7 +253,7 @@ header {
 
 
 /* =========================================
-   6. METRICS
+   7. HOMEPAGE METRICS
    ========================================= */
 
 .metrics {
@@ -296,7 +306,7 @@ header {
 
 
 /* =========================================
-   7. HOMEPAGE INTRO
+   8. HOMEPAGE INTRO
    ========================================= */
 
 .intro {
@@ -328,13 +338,9 @@ header {
     line-height: 1.8;
 }
 
-.section-label {
-    margin-bottom: 18px;
-}
-
 
 /* =========================================
-   8. CAPABILITY CARDS
+   9. CAPABILITY CARDS
    ========================================= */
 
 .focus {
@@ -391,7 +397,7 @@ header {
 
 
 /* =========================================
-   9. FEATURED
+   10. FEATURED
    ========================================= */
 
 .featured {
@@ -431,7 +437,7 @@ header {
 
 
 /* =========================================
-   10. TEXT LINKS
+   11. TEXT LINKS
    ========================================= */
 
 .text-link {
@@ -458,7 +464,7 @@ header {
 
 
 /* =========================================
-   11. PAGE HERO
+   12. STANDARD PAGE HERO
    ========================================= */
 
 .page-hero {
@@ -471,11 +477,13 @@ header {
 }
 
 .page-hero h1 {
-    max-width: 850px;
+    max-width: 900px;
 
     margin-bottom: 28px;
 
     font-size: clamp(44px, 6vw, 68px);
+
+    line-height: 1.08;
 
     letter-spacing: -2.5px;
 }
@@ -492,7 +500,7 @@ header {
 
 
 /* =========================================
-   12. GENERAL CONTENT SECTION
+   13. GENERAL CONTENT SECTION
    ========================================= */
 
 .content-section {
@@ -524,9 +532,30 @@ header {
     line-height: 1.8;
 }
 
+.content-section ul,
+.content-section ol {
+    max-width: 760px;
+
+    margin-top: 25px;
+
+    padding-left: 24px;
+
+    color: #667085;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+.content-section li {
+    margin-bottom: 10px;
+
+    padding-left: 5px;
+}
+
 
 /* =========================================
-   13. EXPERIENCE
+   14. EXPERIENCE
    ========================================= */
 
 .experience-entry {
@@ -555,11 +584,6 @@ header {
 
     font-size: 21px;
 }
-
-
-/* =========================================
-   14. EXPERIENCE LISTS
-   ========================================= */
 
 .experience-block ul {
     max-width: 760px;
@@ -690,11 +714,6 @@ header {
     line-height: 1.8;
 }
 
-
-/* =========================================
-   17. ABOUT SIDEBAR
-   ========================================= */
-
 .about-sidebar {
     width: 100%;
 
@@ -735,11 +754,6 @@ header {
     margin-bottom: 7px;
 }
 
-
-/* =========================================
-   18. ABOUT SECTION
-   ========================================= */
-
 .about-section {
     width: min(100% - 56px, 1080px);
 
@@ -769,8 +783,9 @@ header {
     line-height: 1.8;
 }
 
+
 /* =========================================
-   PROJECT SECTION
+   17. PROJECT SECTION
    ========================================= */
 
 .project-section {
@@ -796,8 +811,10 @@ header {
 
     line-height: 1.8;
 }
+
+
 /* =========================================
-   19. PROJECT GRID
+   18. PROJECT GRID
    ========================================= */
 
 .project-grid {
@@ -807,7 +824,7 @@ header {
 
     display: grid;
 
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
 
     gap: 20px;
 }
@@ -842,6 +859,10 @@ header {
 
     box-shadow:
         0 12px 30px rgba(16, 24, 40, 0.07);
+}
+
+.project-card.featured-project {
+    border: 2px solid #111;
 }
 
 .project-status {
@@ -902,7 +923,598 @@ header {
 
 
 /* =========================================
-   20. FOOTER
+   19. CASE STUDY IMAGES
+   ========================================= */
+
+.process-image {
+    display: block;
+
+    width: 70%;
+    max-width: 800px;
+
+    height: auto;
+
+    margin: 3rem auto;
+
+    border-radius: 10px;
+}
+
+.dashboard-image {
+    display: block;
+
+    width: 90%;
+    max-width: 1200px;
+
+    height: auto;
+
+    margin: 3rem auto;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================
+   20. SUPPLY CHAIN LOGISTICS
+   EXECUTIVE METRICS
+   ========================================= */
+
+.metrics-grid {
+    width: 100%;
+
+    margin: 40px 0 42px;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    gap: 14px;
+}
+
+.metric-card {
+    min-width: 0;
+
+    padding: 28px 24px;
+
+    background: #ffffff;
+
+    border: 1px solid #e1e5ea;
+
+    border-radius: 8px;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.metric-card:hover {
+    transform: translateY(-3px);
+
+    border-color: #c5cbd3;
+
+    box-shadow:
+        0 10px 24px rgba(16, 24, 40, 0.06);
+}
+
+.metric-card h3 {
+    margin-bottom: 8px;
+
+    font-size: 32px;
+
+    letter-spacing: -1.2px;
+}
+
+.metric-card p {
+    margin: 0;
+
+    color: #667085;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    line-height: 1.5;
+
+    letter-spacing: 0.8px;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   21. FINDINGS
+   ========================================= */
+
+.findings-grid {
+    width: 100%;
+
+    margin: 40px 0;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    gap: 16px;
+}
+
+.finding-card {
+    min-width: 0;
+
+    padding: 28px;
+
+    background: #ffffff;
+
+    border: 1px solid #e1e5ea;
+
+    border-radius: 8px;
+}
+
+.finding-card h3 {
+    margin-bottom: 12px;
+
+    font-size: 32px;
+
+    letter-spacing: -1px;
+}
+
+.finding-card p {
+    margin: 0;
+
+    color: #667085;
+
+    font-size: 14px;
+
+    line-height: 1.65;
+}
+
+
+/* =========================================
+   22. PROJECT DOWNLOAD
+   ========================================= */
+
+.case-download {
+    width: 100%;
+
+    margin-bottom: 65px;
+
+    padding: 32px 36px;
+
+    background: #ffffff;
+
+    border: 1px solid #e1e5ea;
+
+    border-radius: 8px;
+}
+
+.case-download h3 {
+    margin-bottom: 12px;
+
+    font-size: 24px;
+
+    letter-spacing: -0.5px;
+}
+
+.case-download p:not(.section-label) {
+    max-width: 720px;
+
+    margin-bottom: 22px;
+
+    color: #667085;
+
+    font-size: 15px;
+
+    line-height: 1.75;
+}
+
+.project-file-links {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 24px;
+}
+
+
+/* =========================================
+   23. LOGISTICS CASE STUDY IMAGES
+   ========================================= */
+
+.case-image {
+    display: block;
+
+    width: 100%;
+    max-width: 980px;
+
+    height: auto;
+
+    margin: 45px auto 55px;
+
+    padding: 14px;
+
+    background: #ffffff;
+
+    border: 1px solid #e1e5ea;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 8px 28px rgba(16, 24, 40, 0.06);
+}
+
+.dashboard-section {
+    padding-bottom: 35px;
+}
+
+.dashboard-gallery {
+    width: min(1180px, calc(100% - 56px));
+
+    margin: 0 auto 60px;
+}
+
+.dashboard-card {
+    margin: 0 0 70px;
+}
+
+.dashboard-card .case-image {
+    width: 100%;
+    max-width: 1180px;
+
+    margin: 0 auto;
+
+    padding: 16px;
+
+    background: #f4f6f8;
+
+    border: 1px solid #dfe3e8;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 10px 30px rgba(16, 24, 40, 0.07);
+
+    object-fit: contain;
+}
+
+.dashboard-card figcaption {
+    width: 100%;
+
+    margin-top: 14px;
+
+    color: #667085;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   24. LOGISTICS NEXT STEP
+   ========================================= */
+
+.case-next-step {
+    width: min(100% - 56px, 1180px);
+
+    margin: 0 auto 80px;
+
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    border-top: 1px solid #e1e5ea;
+}
+
+.case-next-step h2 {
+    max-width: 850px;
+
+    margin-bottom: 26px;
+
+    font-size: clamp(34px, 5vw, 52px);
+
+    letter-spacing: -2px;
+}
+
+.case-next-step > p:not(.section-label) {
+    max-width: 720px;
+
+    color: #667085;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   25. CONTACT PAGE
+   ========================================= */
+
+.contact-section {
+    width: min(1100px, calc(100% - 48px));
+
+    margin: 0 auto;
+
+    padding-top: 20px;
+    padding-bottom: 90px;
+}
+
+.contact-grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        320px;
+
+    gap: 70px;
+
+    align-items: start;
+}
+
+.contact-card {
+    max-width: 760px;
+}
+
+.contact-card h2 {
+    max-width: 700px;
+
+    margin-bottom: 26px;
+
+    font-size: clamp(34px, 5vw, 52px);
+
+    letter-spacing: -2px;
+}
+
+.contact-card > p:not(.section-label) {
+    max-width: 680px;
+
+    color: #667085;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+.contact-links {
+    margin-top: 42px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    border-top: 1px solid #e1e5ea;
+}
+
+.contact-link {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    padding: 22px 0;
+
+    border-bottom: 1px solid #e1e5ea;
+
+    color: #17202a;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    transition:
+        color 0.2s ease,
+        padding-left 0.2s ease;
+}
+
+.contact-link:hover {
+    color: #667085;
+
+    padding-left: 5px;
+}
+
+.contact-label {
+    flex-shrink: 0;
+
+    color: #667085;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+}
+
+.contact-sidebar {
+    padding: 30px;
+
+    background: #ffffff;
+
+    border: 1px solid #e1e5ea;
+
+    border-radius: 8px;
+}
+
+.contact-sidebar h3 {
+    margin-bottom: 22px;
+
+    font-size: 22px;
+
+    letter-spacing: -0.5px;
+}
+
+.contact-sidebar ul {
+    margin: 0;
+
+    padding-left: 20px;
+
+    color: #667085;
+
+    font-size: 15px;
+
+    line-height: 1.9;
+}
+
+.contact-sidebar li {
+    margin-bottom: 5px;
+}
+
+
+/* =========================================
+   26. INSIGHT ARTICLE
+   ========================================= */
+
+.article-content {
+    width: min(760px, calc(100% - 48px));
+
+    margin: 0 auto;
+
+    padding-top: 20px;
+    padding-bottom: 100px;
+}
+
+.article-content > p {
+    max-width: 760px;
+
+    margin-bottom: 24px;
+
+    color: #667085;
+
+    font-size: 17px;
+
+    line-height: 1.85;
+}
+
+.article-content h2 {
+    max-width: 760px;
+
+    margin-top: 64px;
+    margin-bottom: 24px;
+
+    color: #17202a;
+
+    font-size: 32px;
+
+    line-height: 1.25;
+
+    letter-spacing: -1px;
+}
+
+.article-content blockquote {
+    max-width: 700px;
+
+    margin: 35px 0;
+
+    padding: 20px 24px;
+
+    border-left: 3px solid #17202a;
+
+    color: #344054;
+
+    font-size: 19px;
+
+    font-style: italic;
+
+    line-height: 1.7;
+}
+
+.article-diagram {
+    width: 100%;
+    max-width: 600px;
+
+    margin: 40px auto;
+
+    padding: 30px;
+
+    background: #ffffff;
+
+    border: 1px solid #e1e5ea;
+
+    border-radius: 8px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 14px;
+
+    text-align: center;
+}
+
+.article-diagram strong {
+    font-size: 16px;
+}
+
+.article-diagram span {
+    color: #667085;
+
+    font-size: 20px;
+}
+
+.article-highlight {
+    width: 100%;
+    max-width: 600px;
+
+    margin: 45px auto;
+
+    padding: 35px;
+
+    background: #ffffff;
+
+    border: 1px solid #e1e5ea;
+
+    border-radius: 8px;
+
+    text-align: center;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.article-highlight strong {
+    font-size: 42px;
+
+    letter-spacing: -1.5px;
+}
+
+.article-highlight span {
+    color: #667085;
+
+    font-size: 13px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+.article-footer {
+    margin-top: 90px;
+
+    padding-top: 60px;
+
+    border-top: 1px solid #e1e5ea;
+}
+
+.article-footer p:not(.section-label) {
+    max-width: 700px;
+}
+
+
+/* =========================================
+   27. FOOTER
    ========================================= */
 
 footer {
@@ -927,7 +1539,7 @@ footer p {
 
 
 /* =========================================
-   21. TABLET
+   28. TABLET
    ========================================= */
 
 @media (max-width: 900px) {
@@ -949,6 +1561,10 @@ footer p {
         flex-wrap: wrap;
 
         gap: 14px 20px;
+    }
+
+    .hero {
+        width: calc(100% - 40px);
     }
 
     .metrics {
@@ -979,20 +1595,55 @@ footer p {
         max-width: 700px;
     }
 
+    .page-hero,
     .content-section,
-    .about-section,
-    .page-hero {
+    .about-section {
         width: calc(100% - 40px);
     }
 
     .case-grid {
         grid-template-columns: 1fr;
     }
+
+    .metrics-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .findings-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .dashboard-gallery {
+        width: calc(100% - 40px);
+    }
+
+    .case-image,
+    .dashboard-card .case-image {
+        max-width: 100%;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+    .contact-card {
+        max-width: 760px;
+    }
+
+    .contact-sidebar {
+        max-width: 600px;
+    }
+
+    .content-section .project-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 
 /* =========================================
-   22. MOBILE
+   29. MOBILE
    ========================================= */
 
 @media (max-width: 600px) {
@@ -1176,1156 +1827,7 @@ footer p {
     }
 
 
-    /* Projects */
-
-    .project-grid {
-        margin-top: 30px;
-    }
-
-    .project-card {
-        min-height: auto;
-
-        padding: 26px;
-    }
-
-
-    /* Footer */
-
-    footer {
-        padding-left: 16px;
-        padding-right: 16px;
-    }
-}
-/* =========================================
-   CONTACT PAGE
-   ========================================= */
-
-.contact-section {
-    width: min(1100px, calc(100% - 48px));
-    margin: 0 auto;
-    padding-top: 20px;
-    padding-bottom: 90px;
-}
-
-
-.contact-grid {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) 320px;
-    gap: 70px;
-    align-items: start;
-}
-
-
-.contact-card {
-    max-width: 760px;
-}
-
-
-.contact-card h2 {
-    max-width: 700px;
-    margin-bottom: 26px;
-    font-size: clamp(34px, 5vw, 52px);
-    letter-spacing: -2px;
-}
-
-
-.contact-card > p:not(.section-label) {
-    max-width: 680px;
-    color: #667085;
-    font-size: 17px;
-    line-height: 1.8;
-}
-
-
-.contact-links {
-    margin-top: 42px;
-
-    display: flex;
-    flex-direction: column;
-
-    border-top: 1px solid #e1e5ea;
-}
-
-
-.contact-link {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    gap: 30px;
-
-    padding: 22px 0;
-
-    border-bottom: 1px solid #e1e5ea;
-
-    color: #17202a;
-
-    font-size: 15px;
-    font-weight: 600;
-
-    transition:
-        color 0.2s ease,
-        padding-left 0.2s ease;
-}
-
-
-.contact-link:hover {
-    color: #667085;
-    padding-left: 5px;
-}
-
-
-.contact-label {
-    flex-shrink: 0;
-
-    color: #667085;
-
-    font-size: 11px;
-    font-weight: 700;
-
-    letter-spacing: 1.5px;
-
-    text-transform: uppercase;
-}
-
-
-.contact-sidebar {
-    padding: 30px;
-
-    background: #ffffff;
-
-    border: 1px solid #e1e5ea;
-    border-radius: 8px;
-}
-
-
-.contact-sidebar h3 {
-    margin-bottom: 22px;
-
-    font-size: 22px;
-
-    letter-spacing: -0.5px;
-}
-
-
-.contact-sidebar ul {
-    margin: 0;
-    padding-left: 20px;
-
-    color: #667085;
-
-    font-size: 15px;
-
-    line-height: 1.9;
-}
-
-
-.contact-sidebar li {
-    margin-bottom: 5px;
-}
-
-
-/* ---------- CONTACT TABLET ---------- */
-
-@media (max-width: 900px) {
-
-    .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 45px;
-    }
-
-    .contact-card {
-        max-width: 760px;
-    }
-
-    .contact-sidebar {
-        max-width: 600px;
-    }
-
-}
-
-
-/* ---------- CONTACT MOBILE ---------- */
-
-@media (max-width: 600px) {
-
-    .contact-section {
-        width: calc(100% - 32px);
-
-        padding-bottom: 60px;
-    }
-
-
-    .contact-grid {
-        display: block;
-    }
-
-
-    .contact-card {
-        max-width: 100%;
-    }
-
-
-    .contact-card h2 {
-        font-size: 36px;
-    }
-
-
-    .contact-card > p:not(.section-label) {
-        max-width: 100%;
-        font-size: 16px;
-        line-height: 1.7;
-    }
-
-
-    .contact-links {
-        margin-top: 32px;
-    }
-
-
-    .contact-link {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 7px;
-
-        padding: 18px 0;
-
-        overflow-wrap: anywhere;
-    }
-
-
-    .contact-sidebar {
-        margin-top: 45px;
-
-        padding: 24px;
-    }
-
-}
-/* =========================================
-   INSIGHT ARTICLE
-   ========================================= */
-
-.article-content {
-    width: min(760px, calc(100% - 48px));
-
-    margin: 0 auto;
-
-    padding-bottom: 100px;
-}
-
-
-.article-content p {
-    margin-bottom: 24px;
-
-    color: #475467;
-
-    font-size: 17px;
-
-    line-height: 1.85;
-}
-
-
-.article-content h2 {
-    margin-top: 65px;
-
-    margin-bottom: 24px;
-
-    color: #17202a;
-
-    font-size: 34px;
-
-    letter-spacing: -1px;
-}
-
-
-.article-content blockquote {
-    margin: 35px 0;
-
-    padding: 24px 30px;
-
-    border-left: 3px solid #17202a;
-
-    background: #ffffff;
-
-    color: #17202a;
-
-    font-size: 20px;
-
-    font-weight: 600;
-}
-
-
-.article-diagram {
-    margin: 40px 0;
-
-    padding: 30px;
-
-    background: #ffffff;
-
-    border: 1px solid #e1e5ea;
-
-    border-radius: 8px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: space-between;
-
-    gap: 15px;
-
-    text-align: center;
-}
-
-
-.article-diagram span {
-    color: #98a2b3;
-
-    font-size: 20px;
-}
-
-
-.article-highlight {
-    margin: 50px 0;
-
-    padding: 35px;
-
-    background: #17202a;
-
-    border-radius: 8px;
-
-    color: #ffffff;
-
-    text-align: center;
-}
-
-
-.article-highlight strong {
-    display: block;
-
-    margin-bottom: 8px;
-
-    font-size: 42px;
-
-    letter-spacing: -2px;
-}
-
-
-.article-highlight span {
-    font-size: 13px;
-
-    text-transform: uppercase;
-
-    letter-spacing: 1px;
-}
-
-
-.article-footer {
-    margin-top: 90px;
-
-    padding-top: 50px;
-
-    border-top: 1px solid #e1e5ea;
-}
-
-
-.article-footer h2 {
-    margin-top: 15px;
-}
-
-
-@media (max-width: 600px) {
-
-    .article-content {
-        width: calc(100% - 32px);
-    }
-
-
-    .article-content p {
-        font-size: 16px;
-    }
-
-
-    .article-content h2 {
-        font-size: 30px;
-    }
-
-
-    .article-diagram {
-        flex-direction: column;
-
-        align-items: stretch;
-    }
-
-
-    .article-diagram span {
-        transform: rotate(90deg);
-    }
-
-
-    .article-highlight strong {
-        font-size: 36px;
-    }
-
-}
-/* =========================================
-   INSIGHTS PAGE FIX
-   ========================================= */
-
-.content-section {
-    width: min(1100px, calc(100% - 48px));
-    margin-left: auto;
-    margin-right: auto;
-
-    padding-top: 90px;
-    padding-bottom: 90px;
-}
-
-.content-section > p:not(.section-label),
-.content-section > h2 {
-    max-width: 760px;
-}
-
-.content-section > p:not(.section-label) {
-    line-height: 1.8;
-    color: #667085;
-    font-size: 17px;
-}
-
-
-/* Insight cards */
-
-.content-section .project-grid {
-    width: 100%;
-    margin-top: 42px;
-
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-
-    gap: 20px;
-}
-
-
-.content-section .project-card {
-    min-width: 0;
-}
-
-
-/* =========================================
-   INSIGHTS — MOBILE
-   ========================================= */
-
-@media (max-width: 900px) {
-
-    .content-section {
-        width: calc(100% - 48px);
-    }
-
-    .content-section .project-grid {
-        grid-template-columns: 1fr;
-    }
-
-}
-
-
-@media (max-width: 600px) {
-
-    .content-section {
-        width: calc(100% - 32px);
-
-        padding-top: 65px;
-        padding-bottom: 65px;
-    }
-
-    .content-section > p:not(.section-label) {
-        max-width: 100%;
-        font-size: 16px;
-        line-height: 1.7;
-    }
-
-    .content-section .project-grid {
-        width: 100%;
-        margin-top: 30px;
-
-        grid-template-columns: 1fr;
-        gap: 16px;
-    }
-
-}
-/* =========================================
-   ARTICLE PAGE — READING LAYOUT
-   ========================================= */
-
-.article-content {
-    width: min(760px, calc(100% - 48px));
-    margin-left: auto;
-    margin-right: auto;
-
-    padding-top: 20px;
-    padding-bottom: 100px;
-}
-
-
-/* Article paragraphs */
-
-.article-content > p {
-    max-width: 760px;
-
-    margin-bottom: 24px;
-
-    color: #667085;
-
-    font-size: 17px;
-    line-height: 1.85;
-}
-
-
-/* Article headings */
-
-.article-content h2 {
-    max-width: 760px;
-
-    margin-top: 64px;
-    margin-bottom: 24px;
-
-    font-size: 32px;
-    line-height: 1.25;
-
-    letter-spacing: -1px;
-}
-
-
-/* Quotes */
-
-.article-content blockquote {
-    max-width: 700px;
-
-    margin: 35px 0;
-
-    padding: 20px 24px;
-
-    border-left: 3px solid #17202a;
-
-    color: #344054;
-
-    font-size: 19px;
-    font-style: italic;
-    line-height: 1.7;
-}
-
-
-/* Article diagram */
-
-.article-diagram {
-    width: 100%;
-    max-width: 600px;
-
-    margin: 40px auto;
-
-    padding: 30px;
-
-    background: #ffffff;
-
-    border: 1px solid #e1e5ea;
-    border-radius: 8px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 14px;
-
-    text-align: center;
-}
-
-
-.article-diagram strong {
-    font-size: 16px;
-}
-
-
-.article-diagram span {
-    color: #667085;
-    font-size: 20px;
-}
-
-
-/* Key result */
-
-.article-highlight {
-    max-width: 600px;
-
-    margin: 45px auto;
-
-    padding: 35px;
-
-    background: #ffffff;
-
-    border: 1px solid #e1e5ea;
-    border-radius: 8px;
-
-    text-align: center;
-
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-
-.article-highlight strong {
-    font-size: 42px;
-    letter-spacing: -1.5px;
-}
-
-
-.article-highlight span {
-    color: #667085;
-
-    font-size: 13px;
-
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-
-/* Article ending */
-
-.article-footer {
-    margin-top: 90px;
-    padding-top: 60px;
-
-    border-top: 1px solid #e1e5ea;
-}
-
-
-.article-footer p:not(.section-label) {
-    max-width: 700px;
-}
-
-
-/* =========================================
-   ARTICLE — MOBILE
-   ========================================= */
-
-@media (max-width: 600px) {
-
-    .article-content {
-        width: calc(100% - 32px);
-
-        padding-top: 10px;
-        padding-bottom: 70px;
-    }
-
-
-    .article-content > p {
-        max-width: 100%;
-
-        font-size: 16px;
-        line-height: 1.75;
-    }
-
-
-    .article-content h2 {
-        max-width: 100%;
-
-        margin-top: 48px;
-
-        font-size: 28px;
-    }
-
-
-    .article-content blockquote {
-        width: 100%;
-
-        margin: 30px 0;
-
-        padding: 16px 20px;
-
-        font-size: 17px;
-    }
-
-
-    .article-diagram {
-        width: 100%;
-
-        padding: 24px 18px;
-
-        margin: 32px 0;
-    }
-
-
-    .article-highlight {
-        width: 100%;
-
-        margin: 35px 0;
-
-        padding: 28px 20px;
-    }
-
-
-    .article-highlight strong {
-        font-size: 36px;
-    }
-
-
-    .article-footer {
-        margin-top: 60px;
-        padding-top: 40px;
-    }
-
-}
-/* =========================
-   CASE STUDY IMAGES
-========================= */
-
-.process-image {
-    display: block;
-    width: 70%;
-    max-width: 800px;
-    margin: 3rem auto;
-    border-radius: 10px;
-}
-
-.dashboard-image {
-    display: block;
-    width: 90%;
-    max-width: 1200px;
-    margin: 3rem auto;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-}
-.project-card.featured-project {
-    border: 2px solid #111;
-}
-/* =========================================================
-   SUPPLY CHAIN LOGISTICS CASE STUDY
-   ========================================================= */
-
-
-/* =========================================
-   CASE STUDY HERO
-   ========================================= */
-
-.page-hero {
-    width: min(1080px, calc(100% - 56px));
-
-    margin: 0 auto;
-
-    padding-top: 105px;
-    padding-bottom: 75px;
-}
-
-.page-hero h1 {
-    max-width: 900px;
-
-    margin-bottom: 25px;
-
-    font-size: clamp(44px, 6vw, 68px);
-
-    line-height: 1.08;
-
-    letter-spacing: -2.8px;
-}
-
-.page-hero > p:not(.section-label) {
-    max-width: 720px;
-
-    color: #667085;
-
-    font-size: 18px;
-
-    line-height: 1.8;
-}
-
-
-/* =========================================
-   CASE STUDY SECTIONS
-   ========================================= */
-
-.case-section {
-    width: min(1080px, calc(100% - 56px));
-
-    margin: 0 auto;
-
-    padding-top: 70px;
-    padding-bottom: 80px;
-}
-
-.case-section > h2 {
-    max-width: 850px;
-
-    margin-bottom: 28px;
-
-    font-size: clamp(32px, 5vw, 48px);
-
-    line-height: 1.2;
-
-    letter-spacing: -1.8px;
-}
-
-.case-section > p:not(.section-label) {
-    max-width: 760px;
-
-    color: #667085;
-
-    font-size: 17px;
-
-    line-height: 1.8;
-}
-
-
-/* =========================================
-   EXECUTIVE METRICS
-   ========================================= */
-
-.metrics-grid {
-    width: 100%;
-
-    margin: 40px 0 42px;
-
-    display: grid;
-
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-
-    gap: 14px;
-}
-
-.metric-card {
-    min-width: 0;
-
-    padding: 28px 24px;
-
-    background: #ffffff;
-
-    border: 1px solid #e1e5ea;
-
-    border-radius: 8px;
-
-    transition:
-        transform 0.2s ease,
-        border-color 0.2s ease,
-        box-shadow 0.2s ease;
-}
-
-.metric-card:hover {
-    transform: translateY(-3px);
-
-    border-color: #c5cbd3;
-
-    box-shadow:
-        0 10px 24px rgba(16, 24, 40, 0.06);
-}
-
-.metric-card h3 {
-    margin-bottom: 8px;
-
-    font-size: 32px;
-
-    letter-spacing: -1.2px;
-}
-
-.metric-card p {
-    margin: 0;
-
-    color: #667085;
-
-    font-size: 12px;
-
-    font-weight: 700;
-
-    line-height: 1.5;
-
-    letter-spacing: 0.8px;
-
-    text-transform: uppercase;
-}
-
-
-/* =========================================
-   PROJECT FILES
-   ========================================= */
-
-.case-download {
-    width: 100%;
-
-    margin-bottom: 65px;
-
-    padding: 32px 36px;
-
-    background: #ffffff;
-
-    border: 1px solid #e1e5ea;
-
-    border-radius: 8px;
-}
-
-.case-download h3 {
-    margin-bottom: 12px;
-
-    font-size: 24px;
-
-    letter-spacing: -0.5px;
-}
-
-.case-download p:not(.section-label) {
-    max-width: 720px;
-
-    margin-bottom: 22px;
-
-    color: #667085;
-
-    font-size: 15px;
-
-    line-height: 1.75;
-}
-
-.project-file-links {
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 24px;
-}
-
-
-/* =========================================
-   CASE STUDY LISTS
-   ========================================= */
-
-.case-section ul,
-.case-section ol {
-    max-width: 760px;
-
-    margin-top: 25px;
-
-    padding-left: 24px;
-
-    color: #667085;
-
-    font-size: 16px;
-
-    line-height: 1.8;
-}
-
-.case-section li {
-    margin-bottom: 10px;
-
-    padding-left: 5px;
-}
-
-
-/* =========================================
-   FINDINGS
-   ========================================= */
-
-.findings-grid {
-    width: 100%;
-
-    margin-top: 40px;
-
-    display: grid;
-
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-
-    gap: 16px;
-}
-
-.finding-card {
-    min-width: 0;
-
-    padding: 28px;
-
-    background: #ffffff;
-
-    border: 1px solid #e1e5ea;
-
-    border-radius: 8px;
-}
-
-.finding-card h3 {
-    margin-bottom: 12px;
-
-    font-size: 32px;
-
-    letter-spacing: -1px;
-}
-
-.finding-card p {
-    margin: 0;
-
-    color: #667085;
-
-    font-size: 14px;
-
-    line-height: 1.65;
-}
-
-
-/* =========================================
-   CASE STUDY IMAGES
-   ========================================= */
-
-.case-image {
-    display: block;
-
-    width: 100%;
-    max-width: 980px;
-
-    height: auto;
-
-    margin: 45px auto 55px;
-
-    padding: 14px;
-
-    background: #ffffff;
-
-    border: 1px solid #e1e5ea;
-
-    border-radius: 12px;
-
-    box-shadow:
-        0 8px 28px rgba(16, 24, 40, 0.06);
-}
-
-
-/* =========================================
-   DASHBOARD INTRODUCTION
-   ========================================= */
-
-.dashboard-section {
-    padding-bottom: 35px;
-}
-
-
-/* =========================================
-   DASHBOARD GALLERY
-   ========================================= */
-
-.dashboard-gallery {
-    width: min(1180px, calc(100% - 56px));
-
-    margin: 0 auto 60px;
-}
-
-.dashboard-card {
-    margin: 0 0 70px;
-}
-
-.dashboard-card .case-image {
-    width: 100%;
-    max-width: 1180px;
-
-    margin: 0 auto;
-
-    padding: 16px;
-
-    background: #f4f6f8;
-
-    border: 1px solid #dfe3e8;
-
-    border-radius: 12px;
-
-    box-shadow:
-        0 10px 30px rgba(16, 24, 40, 0.07);
-
-    object-fit: contain;
-}
-
-.dashboard-card figcaption {
-    width: 100%;
-
-    margin-top: 14px;
-
-    color: #667085;
-
-    font-size: 12px;
-
-    font-weight: 700;
-
-    letter-spacing: 1px;
-
-    text-transform: uppercase;
-}
-
-
-/* =========================================
-   FINAL FEATURED SECTION
-   ========================================= */
-
-.case-next-step {
-    padding-top: 85px;
-    padding-bottom: 95px;
-
-    border-top: 1px solid #e1e5ea;
-}
-
-.case-next-step h2 {
-    max-width: 850px;
-}
-
-.case-next-step > p:not(.section-label) {
-    max-width: 720px;
-}
-
-
-/* =========================================
-   TABLET
-   ========================================= */
-
-@media (max-width: 900px) {
-
-    .page-hero,
-    .case-section {
-        width: calc(100% - 48px);
-    }
-
-    .metrics-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .findings-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .dashboard-gallery {
-        width: calc(100% - 48px);
-    }
-
-    .case-image,
-    .dashboard-card .case-image {
-        max-width: 100%;
-    }
-
-}
-
-
-/* =========================================
-   MOBILE
-   ========================================= */
-
-@media (max-width: 600px) {
-
-    .page-hero,
-    .case-section {
-        width: calc(100% - 32px);
-    }
-
-    .page-hero {
-        padding-top: 75px;
-        padding-bottom: 55px;
-    }
-
-    .page-hero h1 {
-        font-size: 42px;
-
-        letter-spacing: -1.8px;
-    }
-
-    .page-hero > p:not(.section-label) {
-        font-size: 16px;
-    }
-
-
-    /* Metrics */
+    /* Supply chain metrics */
 
     .metrics-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -2348,23 +1850,6 @@ footer p {
     }
 
 
-    /* Project files */
-
-    .case-download {
-        padding: 25px 22px;
-
-        margin-bottom: 45px;
-    }
-
-    .project-file-links {
-        flex-direction: column;
-
-        align-items: flex-start;
-
-        gap: 14px;
-    }
-
-
     /* Findings */
 
     .findings-grid {
@@ -2378,7 +1863,13 @@ footer p {
     }
 
 
-    /* Images */
+    /* Case study images */
+
+    .process-image {
+        width: 100%;
+
+        margin: 2rem auto;
+    }
 
     .case-image,
     .dashboard-card .case-image {
@@ -2410,11 +1901,169 @@ footer p {
     }
 
 
-    /* Final section */
+    /* Project files */
+
+    .case-download {
+        padding: 25px 22px;
+
+        margin-bottom: 45px;
+    }
+
+    .project-file-links {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 14px;
+    }
+
+
+    /* Logistics next step */
 
     .case-next-step {
-        padding-top: 65px;
+        width: calc(100% - 32px);
+
+        padding-top: 60px;
+        padding-bottom: 60px;
+
+        margin-bottom: 50px;
+    }
+
+    .case-next-step h2 {
+        font-size: 36px;
+    }
+
+
+    /* Projects */
+
+    .project-grid {
+        margin-top: 30px;
+    }
+
+    .project-card {
+        min-height: auto;
+
+        padding: 26px;
+    }
+
+
+    /* Contact */
+
+    .contact-section {
+        width: calc(100% - 32px);
+
+        padding-bottom: 60px;
+    }
+
+    .contact-grid {
+        display: block;
+    }
+
+    .contact-card {
+        max-width: 100%;
+    }
+
+    .contact-card h2 {
+        font-size: 36px;
+    }
+
+    .contact-card > p:not(.section-label) {
+        max-width: 100%;
+
+        font-size: 16px;
+
+        line-height: 1.7;
+    }
+
+    .contact-links {
+        margin-top: 32px;
+    }
+
+    .contact-link {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 7px;
+
+        padding: 18px 0;
+
+        overflow-wrap: anywhere;
+    }
+
+    .contact-sidebar {
+        margin-top: 45px;
+
+        padding: 24px;
+    }
+
+
+    /* Article */
+
+    .article-content {
+        width: calc(100% - 32px);
+
+        padding-top: 10px;
         padding-bottom: 70px;
     }
 
+    .article-content > p {
+        max-width: 100%;
+
+        font-size: 16px;
+
+        line-height: 1.75;
+    }
+
+    .article-content h2 {
+        max-width: 100%;
+
+        margin-top: 48px;
+
+        font-size: 28px;
+    }
+
+    .article-content blockquote {
+        width: 100%;
+
+        margin: 30px 0;
+
+        padding: 16px 20px;
+
+        font-size: 17px;
+    }
+
+    .article-diagram {
+        width: 100%;
+
+        padding: 24px 18px;
+
+        margin: 32px 0;
+    }
+
+    .article-highlight {
+        width: 100%;
+
+        margin: 35px 0;
+
+        padding: 28px 20px;
+    }
+
+    .article-highlight strong {
+        font-size: 36px;
+    }
+
+    .article-footer {
+        margin-top: 60px;
+
+        padding-top: 40px;
+    }
+
+
+    /* Footer */
+
+    footer {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
 }

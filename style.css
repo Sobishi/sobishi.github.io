@@ -1896,3 +1896,526 @@ footer p {
 .project-card.featured-project {
     border: 2px solid #111;
 }
+/* =========================================================
+   SUPPLY CHAIN LOGISTICS CASE STUDY
+   Page-specific styling
+   ========================================================= */
+
+
+/* =========================================
+   1. CASE STUDY PAGE WIDTH
+   ========================================= */
+
+.case-section {
+    width: min(100% - 56px, 1080px);
+    margin: 0 auto;
+
+    padding-top: 70px;
+    padding-bottom: 80px;
+}
+
+.case-section > h2 {
+    max-width: 850px;
+
+    margin-bottom: 28px;
+
+    font-size: clamp(32px, 5vw, 48px);
+
+    letter-spacing: -1.8px;
+}
+
+.case-section > p:not(.section-label) {
+    max-width: 760px;
+
+    color: #667085;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   2. CASE STUDY HERO
+   ========================================= */
+
+.page-hero {
+    width: min(100% - 56px, 1080px);
+
+    margin: 0 auto;
+
+    padding-top: 105px;
+    padding-bottom: 75px;
+}
+
+.page-hero h1 {
+    max-width: 900px;
+
+    margin-bottom: 25px;
+
+    font-size: clamp(44px, 6vw, 68px);
+
+    line-height: 1.08;
+
+    letter-spacing: -2.8px;
+}
+
+.page-hero > p:not(.section-label) {
+    max-width: 720px;
+
+    color: #667085;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   3. EXECUTIVE METRICS
+   ========================================= */
+
+.case-section .metrics-grid {
+    width: 100%;
+
+    margin: 40px 0 42px;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 14px;
+}
+
+.case-section .metric-card {
+    min-width: 0;
+
+    padding: 28px 24px;
+
+    background: #ffffff;
+
+    border: 1px solid #e1e5ea;
+
+    border-radius: 8px;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.case-section .metric-card:hover {
+    transform: translateY(-3px);
+
+    border-color: #c5cbd3;
+
+    box-shadow:
+        0 10px 24px rgba(16, 24, 40, 0.06);
+}
+
+.case-section .metric-card h3 {
+    margin-bottom: 8px;
+
+    font-size: 32px;
+
+    letter-spacing: -1.2px;
+}
+
+.case-section .metric-card p {
+    margin: 0;
+
+    color: #667085;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    line-height: 1.5;
+
+    letter-spacing: 0.8px;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   4. PROJECT FILES
+   ========================================= */
+
+.case-download {
+    width: 100%;
+
+    margin-bottom: 65px;
+
+    padding: 32px 36px;
+
+    background: #ffffff;
+
+    border: 1px solid #e1e5ea;
+
+    border-radius: 8px;
+}
+
+.case-download h3 {
+    margin-bottom: 12px;
+
+    font-size: 24px;
+
+    letter-spacing: -0.5px;
+}
+
+.case-download p:not(.section-label) {
+    max-width: 720px;
+
+    margin-bottom: 22px;
+
+    color: #667085;
+
+    font-size: 15px;
+
+    line-height: 1.75;
+}
+
+.case-download .text-link {
+    margin-right: 20px;
+}
+
+
+/* =========================================
+   5. LISTS
+   ========================================= */
+
+.case-section ul,
+.case-section ol {
+    max-width: 760px;
+
+    margin-top: 25px;
+
+    padding-left: 24px;
+
+    color: #667085;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+.case-section li {
+    margin-bottom: 10px;
+
+    padding-left: 5px;
+}
+
+
+/* =========================================
+   6. FINDINGS GRID
+   ========================================= */
+
+.case-section .findings-grid {
+    width: 100%;
+
+    margin-top: 40px;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 16px;
+}
+
+.case-section .finding-card {
+    min-width: 0;
+
+    padding: 28px;
+
+    background: #ffffff;
+
+    border: 1px solid #e1e5ea;
+
+    border-radius: 8px;
+}
+
+.case-section .finding-card h3 {
+    margin-bottom: 12px;
+
+    font-size: 32px;
+
+    letter-spacing: -1px;
+}
+
+.case-section .finding-card p {
+    margin: 0;
+
+    color: #667085;
+
+    font-size: 14px;
+
+    line-height: 1.65;
+}
+
+
+/* =========================================================
+   7. CASE STUDY IMAGES
+   ========================================================= */
+
+/*
+   This is the important section.
+
+   The old images were effectively being rendered directly
+   against the page. These rules create a controlled,
+   centred presentation area.
+*/
+
+.case-image {
+    display: block;
+
+    width: min(100% - 96px, 1120px);
+
+    height: auto;
+
+    margin: 45px auto 75px;
+
+    padding: 14px;
+
+    background: #ffffff;
+
+    border: 1px solid #e1e5ea;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 8px 28px rgba(16, 24, 40, 0.06);
+
+    object-fit: contain;
+}
+
+
+/* Solution architecture is usually better slightly narrower */
+
+.case-section .case-image {
+    width: min(100% - 96px, 980px);
+}
+
+
+/* Dashboard screenshots get a little more room */
+
+.case-section + .case-image {
+    width: min(100% - 96px, 1120px);
+}
+
+
+/* =========================================
+   8. DASHBOARD SCREENSHOT PRESENTATION
+   ========================================= */
+
+/*
+   Give dashboards a soft neutral canvas so that the
+   screenshot itself doesn't visually collide with the page.
+*/
+
+img[alt="Executive Dashboard"],
+img[alt="Provider Scorecard"],
+img[alt="Exception Analysis Dashboard"],
+img[alt="Site Performance Dashboard"] {
+    background: #f4f6f8;
+}
+
+
+/*
+   Dashboard screenshots should not become excessively tall.
+   The browser preserves the original aspect ratio.
+*/
+
+img[alt="Executive Dashboard"],
+img[alt="Provider Scorecard"],
+img[alt="Exception Analysis Dashboard"],
+img[alt="Site Performance Dashboard"] {
+    max-height: 720px;
+
+    object-fit: contain;
+}
+
+
+/* =========================================
+   9. DASHBOARD SEPARATION
+   ========================================= */
+
+/*
+   Add more breathing room between consecutive dashboard
+   screenshots.
+*/
+
+.case-image + .case-image {
+    margin-top: 85px;
+}
+
+
+/* =========================================
+   10. FINAL FEATURED SECTION
+   ========================================= */
+
+.case-section + .featured {
+    width: min(100% - 56px, 1080px);
+
+    margin-left: auto;
+    margin-right: auto;
+
+    padding-top: 85px;
+    padding-bottom: 95px;
+}
+
+.case-section + .featured h2 {
+    max-width: 850px;
+}
+
+.case-section + .featured > p:not(.section-label) {
+    max-width: 720px;
+}
+
+
+/* =========================================
+   11. TABLET
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    .case-section {
+        width: calc(100% - 48px);
+    }
+
+    .page-hero {
+        width: calc(100% - 48px);
+    }
+
+    .case-section .metrics-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .case-section .findings-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .case-image,
+    .case-section .case-image,
+    .case-section + .case-image {
+        width: calc(100% - 48px);
+
+        padding: 10px;
+
+        margin-top: 38px;
+        margin-bottom: 60px;
+    }
+
+}
+
+
+/* =========================================
+   12. MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    .case-section {
+        width: calc(100% - 32px);
+
+        padding-top: 55px;
+        padding-bottom: 60px;
+    }
+
+    .page-hero {
+        width: calc(100% - 32px);
+
+        padding-top: 75px;
+        padding-bottom: 55px;
+    }
+
+    .page-hero h1 {
+        font-size: 42px;
+
+        letter-spacing: -1.8px;
+    }
+
+    .page-hero > p:not(.section-label) {
+        font-size: 16px;
+    }
+
+
+    /* Metrics */
+
+    .case-section .metrics-grid {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 10px;
+
+        margin-top: 30px;
+    }
+
+    .case-section .metric-card {
+        padding: 22px 18px;
+    }
+
+    .case-section .metric-card h3 {
+        font-size: 28px;
+    }
+
+    .case-section .metric-card p {
+        font-size: 10px;
+    }
+
+
+    /* Download card */
+
+    .case-download {
+        padding: 25px 22px;
+
+        margin-bottom: 45px;
+    }
+
+    .case-download .text-link {
+        margin-bottom: 10px;
+    }
+
+
+    /* Findings */
+
+    .case-section .findings-grid {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+    }
+
+    .case-section .finding-card {
+        padding: 24px;
+    }
+
+
+    /* Images */
+
+    .case-image,
+    .case-section .case-image,
+    .case-section + .case-image {
+        width: calc(100% - 16px);
+
+        margin-top: 32px;
+        margin-bottom: 50px;
+
+        padding: 7px;
+
+        border-radius: 9px;
+    }
+
+    .case-image + .case-image {
+        margin-top: 60px;
+    }
+
+
+    /* Final section */
+
+    .case-section + .featured {
+        width: calc(100% - 32px);
+
+        padding-top: 65px;
+        padding-bottom: 70px;
+    }
+
+}
